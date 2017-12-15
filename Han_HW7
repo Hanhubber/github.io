@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+ <meta charset="UTF-8">
+ <head>
+ <!-- call out to style.css file-->
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+   <link rel="stylesheet" type="text/css" href="assets/style.css">
+ <!-- jQuery -->
+ <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- bootstrap -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Firebase Reference -->
+<script>
+  
+  var config = {
+    apiKey: "AIzaSyC1Yv6qDUnMxr3oXxgEjYf3YPySAUZbsMc",
+    authDomain: "ucb-hw7-opt2-firebaseio.firebaseapp.com",
+    databaseURL: "https://ucb-hw7-opt2-firebaseio.firebaseio.com",
+    projectId: "ucb-hw7-opt2-firebaseio",
+    storageBucket: "ucb-hw7-opt2-firebaseio.appspot.com",
+    messagingSenderId: "337013399852"
+  };
+ // Initialize Firebase
+ firebase.initializeApp(config);
+</script>
+
+ <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+ </head>
+
+<body>
+<!-- Heading -->
+<header>    
+    <h1 style="color: gray; margin-left: 200px;"">Train Scheduler</h1>
+</header>
+
+
+<div id="content">
+<!-- Current train schedule table -->
+<section id = currentTrains>
+
+ <p>Current Train Schedule</p>
+   <form>
+     <div class="row">
+        <div class="col-md-2">
+         <h4 style="font-weight: 700;">Train Name</h4>
+        </div>
+         <div class="col-md-2">
+         <h4 style="font-weight: 700;">Destination</h4>
+        </div>
+        <div class="col-md-2">
+         <h4 style="font-weight: 700;">Frequency (min)</h4>
+        </div>
+        <div class="col-md-2">
+         <h4 style="font-weight: 700;">Next Arrival</h4>
+        </div>
+        <div class="col-md-2">
+         <h4 style="font-weight: 700;"> Minutes Away</h4>
+        </div>
+     </div>
+     <div class="row">
+        <div class="col-md-2">
+         <h4 id = trainName1></h4>
+        </div>
+         <div class="col-md-2">
+         <h4 id = Destination1></h4>
+        </div>
+        <div class="col-md-2">
+         <h4 id = frequency1></h4>
+        </div>
+        <div class="col-md-2">
+         <h4 id = nextArrival1></h4>
+        </div>
+        <div class="col-md-2">
+         <h4 id = minutesAway1></h4>
+        </div>
+     </div>
+   </form>
+</section>
+</div>
+<!-- form to be filled out -->
+ <section id = table>
+<div>
+            <p>Add Train</p>
+        
+     <form>
+   <label for="trainName"><h4>Train Name</h4></label>
+   <input type="text" id="trainName">
+
+   <label for="destination"><h4>Destination</h4></label>
+   <input type="text" id="destination">
+
+   <label for="firstTrain"><h4>First Train Time (HH:mm - military time)</h4></label>
+   <input type="text" id="firstTrain">
+
+   <label for="frequency"><h4>Frequency (min)</h4></label>
+   <input type="text" id="frequency">
+ 
+   <input type="submit" id="submit-train" value="Submit">
+     </form>
+  </div>
+    
+ </section>
+<!-- end form here then close out div content -->
+</div> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script type="text/javascript">
+ </script>
+</body>
+
+
+</html>
